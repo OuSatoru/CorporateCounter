@@ -17,7 +17,20 @@ namespace CorporateCounter
             InitializeComponent();
         }
 
-        
+        public static string GetAppConfig(string strKey)
+        {
+            string file = Application.ExecutablePath;
+            Configuration config = ConfigurationManager.OpenExeConfiguration(file);
+            foreach (string key in config.AppSettings.Settings.AllKeys)
+            {
+                if (key == strKey)
+                {
+                    return config.AppSettings.Settings[strKey].Value.ToString();
+                }
+            }
+            return null;
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,10 +43,29 @@ namespace CorporateCounter
         {
             Font ft = new Font("宋体", 11, FontStyle.Bold);
             SolidBrush sb = new SolidBrush(Color.Black);
-            PointF pf1 = new PointF(150.0F, 150.0F);
+            PointF pfCompName1 = new PointF(150.0F, 150.0F);
             PointF pf2 = new PointF(150.0F, 300.0F);
-            e.Graphics.DrawString("aaa", ft, sb, pf1);
-            e.Graphics.DrawString("bbb", ft, sb, pf2);
+            string CompName = compNametextBox1.Text;
+            string Addr = addrtextBox1.Text;
+            string OwnerPhone = ownerPhonetextBox5.Text;
+            string Postal = GetAppConfig("Postal");      //Postal---224221
+            string OwnerName = ownertextBox3.Text;
+            string OwnerID = ownerIDtextBox4.Text;
+            string Scope = scopetextBox2.Text;
+            string AreaCode = GetAppConfig("AreaCode");  //AreaCode---311700
+            string OwnerCer = GetAppConfig("OwnerCer");  //OwnerCer---身份证
+            string CompCer = GetAppConfig("CompCer");    //CompCer---营业执照
+            string Licence = licencetextBox2.Text;
+            string Tax = taxtextBox7.Text;
+            string BankName = GetAppConfig("BankName");  //BankName---
+            string BankCode = GetAppConfig("BankCode");  //314311711013
+            //账户性质 switch
+            //行业分类 switch
+            e.Graphics.DrawString(CompName, ft, sb, new PointF(160.0F, 145.0F));
+            e.Graphics.DrawString(OwnerPhone, ft, sb, new PointF(350.0F, 145.0F));
+            e.Graphics.DrawString(Scope, ft, sb, new PointF(160.0F, 175.0F));
+            e.Graphics.DrawString(OwnerPhone, ft, sb, new PointF(350.0F, 175.0F));
+            
         }
 
         private void label3_Click(object sender, EventArgs e)

@@ -35,27 +35,27 @@
             this.requisition = new System.Drawing.Printing.PrintDocument();
             this.button1 = new System.Windows.Forms.Button();
             this.Company = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.addrtextBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.scopetextBox2 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.codetextBox6 = new System.Windows.Forms.TextBox();
-            this.taxtextBox7 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.taxtextBox7 = new System.Windows.Forms.TextBox();
+            this.codetextBox6 = new System.Windows.Forms.TextBox();
+            this.scopetextBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.addrtextBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ownerPhonetextBox5 = new System.Windows.Forms.TextBox();
+            this.ownerIDtextBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ownertextBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
             this.Company.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -127,113 +127,14 @@
             this.Company.Size = new System.Drawing.Size(360, 188);
             this.Company.TabIndex = 5;
             // 
-            // label3
+            // label9
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "地址";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // addrtextBox1
-            // 
-            this.addrtextBox1.Location = new System.Drawing.Point(63, 65);
-            this.addrtextBox1.Name = "addrtextBox1";
-            this.addrtextBox1.Size = new System.Drawing.Size(287, 21);
-            this.addrtextBox1.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "经营范围";
-            // 
-            // scopetextBox2
-            // 
-            this.scopetextBox2.Location = new System.Drawing.Point(63, 93);
-            this.scopetextBox2.Name = "scopetextBox2";
-            this.scopetextBox2.Size = new System.Drawing.Size(287, 21);
-            this.scopetextBox2.TabIndex = 7;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(12, 206);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 125);
-            this.panel1.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "法人";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(63, 7);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 21);
-            this.textBox3.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "身份证";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(63, 35);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 21);
-            this.textBox4.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(63, 63);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 21);
-            this.textBox5.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 66);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 12);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "手机号码";
-            // 
-            // codetextBox6
-            // 
-            this.codetextBox6.Location = new System.Drawing.Point(63, 120);
-            this.codetextBox6.Name = "codetextBox6";
-            this.codetextBox6.Size = new System.Drawing.Size(287, 21);
-            this.codetextBox6.TabIndex = 8;
-            // 
-            // taxtextBox7
-            // 
-            this.taxtextBox7.Location = new System.Drawing.Point(63, 148);
-            this.taxtextBox7.Name = "taxtextBox7";
-            this.taxtextBox7.Size = new System.Drawing.Size(287, 21);
-            this.taxtextBox7.TabIndex = 9;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(-2, 151);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 12);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "税务登记证";
             // 
             // label8
             // 
@@ -244,14 +145,113 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "组织机构";
             // 
-            // label9
+            // taxtextBox7
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(-2, 151);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 12);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "税务登记证";
+            this.taxtextBox7.Location = new System.Drawing.Point(63, 148);
+            this.taxtextBox7.Name = "taxtextBox7";
+            this.taxtextBox7.Size = new System.Drawing.Size(287, 21);
+            this.taxtextBox7.TabIndex = 9;
+            // 
+            // codetextBox6
+            // 
+            this.codetextBox6.Location = new System.Drawing.Point(63, 120);
+            this.codetextBox6.Name = "codetextBox6";
+            this.codetextBox6.Size = new System.Drawing.Size(287, 21);
+            this.codetextBox6.TabIndex = 8;
+            // 
+            // scopetextBox2
+            // 
+            this.scopetextBox2.Location = new System.Drawing.Point(63, 93);
+            this.scopetextBox2.Name = "scopetextBox2";
+            this.scopetextBox2.Size = new System.Drawing.Size(287, 21);
+            this.scopetextBox2.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "经营范围";
+            // 
+            // addrtextBox1
+            // 
+            this.addrtextBox1.Location = new System.Drawing.Point(63, 65);
+            this.addrtextBox1.Name = "addrtextBox1";
+            this.addrtextBox1.Size = new System.Drawing.Size(287, 21);
+            this.addrtextBox1.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "地址";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.ownerPhonetextBox5);
+            this.panel1.Controls.Add(this.ownerIDtextBox4);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.ownertextBox3);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(12, 206);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(360, 125);
+            this.panel1.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "手机号码";
+            // 
+            // ownerPhonetextBox5
+            // 
+            this.ownerPhonetextBox5.Location = new System.Drawing.Point(63, 63);
+            this.ownerPhonetextBox5.Name = "ownerPhonetextBox5";
+            this.ownerPhonetextBox5.Size = new System.Drawing.Size(100, 21);
+            this.ownerPhonetextBox5.TabIndex = 4;
+            // 
+            // ownerIDtextBox4
+            // 
+            this.ownerIDtextBox4.Location = new System.Drawing.Point(63, 35);
+            this.ownerIDtextBox4.Name = "ownerIDtextBox4";
+            this.ownerIDtextBox4.Size = new System.Drawing.Size(119, 21);
+            this.ownerIDtextBox4.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "身份证";
+            // 
+            // ownertextBox3
+            // 
+            this.ownertextBox3.Location = new System.Drawing.Point(63, 7);
+            this.ownertextBox3.Name = "ownertextBox3";
+            this.ownertextBox3.Size = new System.Drawing.Size(90, 21);
+            this.ownertextBox3.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "法人";
             // 
             // checkBox1
             // 
@@ -278,28 +278,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "账户性质";
             // 
-            // radioButton1
+            // radioButton4
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(35, 16);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "基";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(46, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(35, 16);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "一";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(127, 19);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(35, 16);
+            this.radioButton4.TabIndex = 3;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "临";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
@@ -312,16 +300,28 @@
             this.radioButton3.Text = "专";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioButton2
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(127, 19);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(35, 16);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "临";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(46, 19);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(35, 16);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "一";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(35, 16);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "基";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -372,10 +372,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ownerPhonetextBox5;
+        private System.Windows.Forms.TextBox ownerIDtextBox4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ownertextBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
