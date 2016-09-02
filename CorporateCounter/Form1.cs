@@ -17,6 +17,7 @@ namespace CorporateCounter
             InitializeComponent();
         }
 
+        //GetUpdateAppConfig http://www.cnblogs.com/luxiaoxun/p/3599341.html
         public static string GetAppConfig(string strKey)
         {
             string file = Application.ExecutablePath;
@@ -29,6 +30,27 @@ namespace CorporateCounter
                 }
             }
             return null;
+        }
+
+        public static void UpdateAppConfig(string newKey, string newValue)
+        {
+            string file = Application.ExecutablePath;
+            Configuration config = ConfigurationManager.OpenExeConfiguration(file);
+            bool exist = false;
+            foreach (string key in config.AppSettings.Settings.AllKeys)
+            {
+                if (key == newKey)
+                {
+                    exist = true;
+                }
+            }
+            if (exist)
+            {
+                config.AppSettings.Settings.Remove(newKey);
+            }
+            config.AppSettings.Settings.Add(newKey, newValue);
+            config.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
         }
 
 
@@ -61,11 +83,13 @@ namespace CorporateCounter
             string BankCode = GetAppConfig("BankCode");  //314311711013
             //账户性质 switch
             //行业分类 switch
-            e.Graphics.DrawString(CompName, ft, sb, new PointF(160.0F, 145.0F));
-            e.Graphics.DrawString(OwnerPhone, ft, sb, new PointF(350.0F, 145.0F));
-            e.Graphics.DrawString(Scope, ft, sb, new PointF(160.0F, 175.0F));
-            e.Graphics.DrawString(OwnerPhone, ft, sb, new PointF(350.0F, 175.0F));
-            
+            e.Graphics.DrawString(CompName, ft, sb, new PointF(280.0F, 170.0F));
+            e.Graphics.DrawString(OwnerPhone, ft, sb, new PointF(700.0F, 170.0F));
+            e.Graphics.DrawString(Addr, ft, sb, new PointF(280.0F, 210.0F));
+            e.Graphics.DrawString(Postal, ft, sb, new PointF(700.0F, 210.0F));
+            e.Graphics.DrawString(OwnerName, ft, sb, new PointF(400.0F, 250.0F));
+            e.Graphics.DrawString(OwnerCer, ft, sb, new PointF(400.0F, 290.0F));
+            e.Graphics.DrawString(OwnerID, ft, sb, new PointF(700.0F, 290.0F));
         }
 
         private void label3_Click(object sender, EventArgs e)
