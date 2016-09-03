@@ -48,10 +48,10 @@ namespace CorporateCounter
             WordExcelFuck.toReplace.Add("%OwnerID%", Form1.ownerID);
             WordExcelFuck.toReplace.Add("%OwnerPhone%", Form1.ownerPhone);
             WordExcelFuck.toReplace.Add("%OwnerName%", Form1.owner);
-            WordExcelFuck.toReplace.Add("OnDate", Form1.onDate);
-            WordExcelFuck.toReplace.Add("ThruDate", Form1.thruDate);
-            WordExcelFuck.toReplace.Add("OnCountry", textBox6.Text);
-            WordExcelFuck.toReplace.Add("InCountry", textBox7.Text);
+            WordExcelFuck.toReplace.Add("%OnDate%", Form1.onDate);
+            WordExcelFuck.toReplace.Add("%ThruDate%", Form1.thruDate);
+            WordExcelFuck.toReplace.Add("%OnCountry%", textBox6.Text);
+            WordExcelFuck.toReplace.Add("%InCountry%", textBox7.Text);
             WordExcelFuck.genTemp("10104Template.doc");
             string currDir = Environment.CurrentDirectory;
             string dest = Path.Combine(currDir, "10104Template_temp.doc");

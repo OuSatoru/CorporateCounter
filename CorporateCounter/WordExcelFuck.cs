@@ -39,21 +39,30 @@ namespace CorporateCounter
                 ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
                 ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
             Word.StoryRanges sr = d.StoryRanges;
-            //foreach (var item in dic)
-            //{
-                foreach (Word.Range rg in sr)
+            foreach (var item in dic)
+            {
+                foreach (Word.Range r in sr)
                 {
-                    rg.Find.ClearFormatting();
-                        rg.Find.Replacement.ClearFormatting();
-                        rg.Find.Text = "%Year%";
-                        rg.Find.Replacement.Text = "2016";
-                        rg.Find.Execute(ref missing, ref missing, ref missing, ref missing, ref missing, 
-                                ref missing, ref missing, ref missing, ref missing, ref missing, ref replace,
-                                ref missing, ref missing, ref missing, ref missing);
-                        
+                    Word.Range r1 = r;
+                    if (Word.WdStoryType.wdTextFrameStory == r.StoryType)
+                    {
+                        do
+                        {
+                            r1.Find.ClearFormatting();
+                            r1.Find.Text = item.Key;
+                            r1.Find.Replacement.ClearFormatting();
+                            r1.Find.Replacement.Text = item.Value;
+                            r1.Find.Execute(
+                                ref missing, ref missing, ref missing, ref missing, ref missing,
+                                ref missing, ref missing, ref missing, ref missing, ref missing,
+                                ref replace, ref missing, ref missing, ref missing, ref missing);
+
+                            r1 = r1.NextStoryRange;
+                        } while (r1 != null);
+                    }
                 }
                 d.Save();
-            //}
+            }
             d.Close(ref missing, ref missing, ref missing);
             wa.Quit(ref missing, ref missing, ref missing);
         }
