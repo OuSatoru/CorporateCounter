@@ -35,6 +35,9 @@
             this.requisition = new System.Drawing.Printing.PrintDocument();
             this.button1 = new System.Windows.Forms.Button();
             this.Company = new System.Windows.Forms.Panel();
+            this.basetextBox1 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.genrecomboBox1 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.thrudatetextBox1 = new System.Windows.Forms.TextBox();
             this.ondatetextBox1 = new System.Windows.Forms.TextBox();
@@ -88,10 +91,7 @@
             this.cometextBox3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.genrecomboBox1 = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.basetextBox1 = new System.Windows.Forms.TextBox();
             this.Company.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -178,6 +178,46 @@
             this.Company.Size = new System.Drawing.Size(360, 251);
             this.Company.TabIndex = 5;
             // 
+            // basetextBox1
+            // 
+            this.basetextBox1.Location = new System.Drawing.Point(63, 228);
+            this.basetextBox1.Name = "basetextBox1";
+            this.basetextBox1.Size = new System.Drawing.Size(287, 21);
+            this.basetextBox1.TabIndex = 26;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(-2, 231);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(65, 12);
+            this.label20.TabIndex = 25;
+            this.label20.Text = "开户许可证";
+            // 
+            // genrecomboBox1
+            // 
+            this.genrecomboBox1.FormattingEnabled = true;
+            this.genrecomboBox1.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N"});
+            this.genrecomboBox1.Location = new System.Drawing.Point(250, 174);
+            this.genrecomboBox1.Name = "genrecomboBox1";
+            this.genrecomboBox1.Size = new System.Drawing.Size(100, 20);
+            this.genrecomboBox1.TabIndex = 24;
+            this.genrecomboBox1.Text = "H";
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -193,6 +233,7 @@
             this.thrudatetextBox1.Name = "thrudatetextBox1";
             this.thrudatetextBox1.Size = new System.Drawing.Size(122, 21);
             this.thrudatetextBox1.TabIndex = 22;
+            this.thrudatetextBox1.TextChanged += new System.EventHandler(this.thrudatetextBox1_TextChanged);
             // 
             // ondatetextBox1
             // 
@@ -200,6 +241,7 @@
             this.ondatetextBox1.Name = "ondatetextBox1";
             this.ondatetextBox1.Size = new System.Drawing.Size(100, 21);
             this.ondatetextBox1.TabIndex = 21;
+            this.ondatetextBox1.TextChanged += new System.EventHandler(this.ondatetextBox1_TextChanged);
             // 
             // label18
             // 
@@ -664,30 +706,6 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // genrecomboBox1
-            // 
-            this.genrecomboBox1.FormattingEnabled = true;
-            this.genrecomboBox1.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N"});
-            this.genrecomboBox1.Location = new System.Drawing.Point(250, 174);
-            this.genrecomboBox1.Name = "genrecomboBox1";
-            this.genrecomboBox1.Size = new System.Drawing.Size(100, 20);
-            this.genrecomboBox1.TabIndex = 24;
-            this.genrecomboBox1.Text = "H";
-            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(436, 103);
@@ -697,22 +715,6 @@
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(-2, 231);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(65, 12);
-            this.label20.TabIndex = 25;
-            this.label20.Text = "开户许可证";
-            // 
-            // basetextBox1
-            // 
-            this.basetextBox1.Location = new System.Drawing.Point(63, 228);
-            this.basetextBox1.Name = "basetextBox1";
-            this.basetextBox1.Size = new System.Drawing.Size(287, 21);
-            this.basetextBox1.TabIndex = 26;
             // 
             // Form1
             // 
@@ -733,6 +735,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "对公表格";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Company.ResumeLayout(false);
             this.Company.PerformLayout();

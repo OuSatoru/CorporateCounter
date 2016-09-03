@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Configuration;
+using System.IO;
 
 namespace CorporateCounter
 {
@@ -38,7 +39,8 @@ namespace CorporateCounter
         public static string rely;
         public static string relyID;
         public static string relyPhone;
-        public static string basee; 
+        public static string basee;
+        public static string dateinchn = string.Format("{0:D}", DateTime.Now);
         #endregion
 
         //GetUpdateAppConfig http://www.cnblogs.com/luxiaoxun/p/3599341.html
@@ -353,6 +355,15 @@ namespace CorporateCounter
             ownerID = ownerIDtextBox4.Text;
             ownerPhone = ownerPhonetextBox5.Text;
             basee = basetextBox1.Text;
+            onDate = ondatetextBox1.Text;
+            if(thrudatetextBox1.Text == "")
+            {
+                thruDate = "2099年01月01日";
+            }
+            else
+            {
+                thruDate = thrudatetextBox1.Text;
+            }
             shenqinbiao sqb = new shenqinbiao();
             sqb.Show();
             
@@ -361,7 +372,38 @@ namespace CorporateCounter
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(genrecomboBox1.Text);
+            MessageBox.Show(Path.Combine(Environment.CurrentDirectory,"10104Template"));
+        }
+
+        private void ondatetextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if(ondatetextBox1.Text.Length == 8)
+            {
+                ondatetextBox1.Text = string.Format("{0}年{1}月{2}日", ondatetextBox1.Text.Substring(0, 4),
+                    ondatetextBox1.Text.Substring(4, 2), ondatetextBox1.Text.Substring(6, 2));
+            }
+        }
+
+        private void thrudatetextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (thrudatetextBox1.Text.Length == 8)
+            {
+                thrudatetextBox1.Text = string.Format("{0}年{1}月{2}日", thrudatetextBox1.Text.Substring(0, 4),
+                    thrudatetextBox1.Text.Substring(4, 2), thrudatetextBox1.Text.Substring(6, 2));
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string currDir = Environment.CurrentDirectory;
+            DirectoryInfo theDir = new DirectoryInfo(currDir);
+            foreach(FileInfo fi in theDir.GetFiles())
+            {
+                if (fi.Name.EndsWith("_temp"))
+                {
+                    fi.Delete();
+                }
+            }
         }
     }
 }
