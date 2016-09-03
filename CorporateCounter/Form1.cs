@@ -17,6 +17,30 @@ namespace CorporateCounter
             InitializeComponent();
         }
 
+        #region static string
+        public static string compName;
+        public static string licence;
+        public static string addr;
+        public static string scope;
+        public static string tax;
+        public static string account;
+        public static string moneyType;
+        public static string money;
+        public static string genre;
+        public static string onDate;
+        public static string thruDate;
+        public static string owner;
+        public static string ownerID;
+        public static string ownerPhone;
+        public static string come;
+        public static string comeID;
+        public static string comePhone;
+        public static string rely;
+        public static string relyID;
+        public static string relyPhone;
+        public static string basee; 
+        #endregion
+
         //GetUpdateAppConfig http://www.cnblogs.com/luxiaoxun/p/3599341.html
         public static string GetAppConfig(string strKey)
         {
@@ -58,7 +82,14 @@ namespace CorporateCounter
         {
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(requisition_PrintPage);
-            pd.Print();
+            try
+            {
+                pd.Print();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void requisition_PrintPage(object sender, PrintPageEventArgs e)
@@ -193,9 +224,14 @@ namespace CorporateCounter
         {
             if(checkBox2.CheckState == CheckState.Checked)
             {
+                checkBox3.Checked = false;
                 relyIDtextBox2.Text = ownerIDtextBox4.Text;
                 relytextBox3.Text = ownertextBox3.Text;
                 relyPhonetextBox1.Text = ownerPhonetextBox5.Text;
+            }
+            else if(checkBox2.CheckState == CheckState.Unchecked)
+            {
+                checkBox3.Checked = true;
             }
         }
 
@@ -203,7 +239,14 @@ namespace CorporateCounter
         {
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(mailFill_PrintPage);
-            pd.Print();
+            try
+            {
+                pd.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void agreement_PrintPage(object sender, PrintPageEventArgs e)
@@ -235,7 +278,90 @@ namespace CorporateCounter
         {
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(agreement_PrintPage);
-            pd.Print();
+            try
+            {
+                pd.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckStateChanged(object sender, EventArgs e)
+        {
+            if(checkBox4.CheckState == CheckState.Unchecked)
+            {
+                comeIDtextBox2.Text = "";
+                comeIDtextBox2.Enabled = false;
+                cometextBox3.Text = "";
+                cometextBox3.Enabled = false;
+                comePhonetextBox1.Text = "";
+                comePhonetextBox1.Enabled = false;
+            }
+            else if(checkBox1.CheckState == CheckState.Checked)
+            {
+                comeIDtextBox2.Enabled = true;
+                cometextBox3.Enabled = true;
+                comePhonetextBox1.Enabled = true;
+            }
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckStateChanged(object sender, EventArgs e)
+        {
+            if(checkBox3.CheckState == CheckState.Checked)
+            {
+                checkBox2.Checked = false;
+                relyIDtextBox2.Text = comeIDtextBox2.Text;
+                relytextBox3.Text = cometextBox3.Text;
+                relyPhonetextBox1.Text = comePhonetextBox1.Text;
+            }
+            else if(checkBox3.CheckState == CheckState.Unchecked)
+            {
+                checkBox2.Checked = true;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            compName = compNametextBox1.Text;
+            licence = licencetextBox2.Text;
+            addr = addrtextBox1.Text;
+            scope = scopetextBox2.Text;
+            tax = taxtextBox7.Text;
+            money = moneytextBox4.Text;
+            moneyType = moneyTypetextBox3.Text;
+            onDate = ondatetextBox1.Text;
+            thruDate = thrudatetextBox1.Text;
+            genre = genrecomboBox1.Text;
+            owner = ownertextBox3.Text;
+            ownerID = ownerIDtextBox4.Text;
+            ownerPhone = ownerPhonetextBox5.Text;
+            basee = basetextBox1.Text;
+            shenqinbiao sqb = new shenqinbiao();
+            sqb.Show();
+            
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(genrecomboBox1.Text);
         }
     }
 }

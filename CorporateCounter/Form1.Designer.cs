@@ -35,10 +35,18 @@
             this.requisition = new System.Drawing.Printing.PrintDocument();
             this.button1 = new System.Windows.Forms.Button();
             this.Company = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.thrudatetextBox1 = new System.Windows.Forms.TextBox();
+            this.ondatetextBox1 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.accounttextBox1 = new System.Windows.Forms.TextBox();
+            this.moneytextBox4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.moneyTypetextBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.taxtextBox7 = new System.Windows.Forms.TextBox();
-            this.codetextBox6 = new System.Windows.Forms.TextBox();
             this.scopetextBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.addrtextBox1 = new System.Windows.Forms.TextBox();
@@ -59,20 +67,36 @@
             this.button2 = new System.Windows.Forms.Button();
             this.mailFill = new System.Drawing.Printing.PrintDocument();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.relyPhonetextBox1 = new System.Windows.Forms.TextBox();
             this.relyIDtextBox2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.relytextBox3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.agreement = new System.Drawing.Printing.PrintDocument();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comePhonetextBox1 = new System.Windows.Forms.TextBox();
+            this.comeIDtextBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cometextBox3 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.genrecomboBox1 = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.basetextBox1 = new System.Windows.Forms.TextBox();
             this.Company.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // compNametextBox1
@@ -116,7 +140,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(402, 103);
+            this.button1.Location = new System.Drawing.Point(573, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -126,10 +150,21 @@
             // 
             // Company
             // 
-            this.Company.Controls.Add(this.label9);
+            this.Company.Controls.Add(this.basetextBox1);
+            this.Company.Controls.Add(this.label20);
+            this.Company.Controls.Add(this.genrecomboBox1);
+            this.Company.Controls.Add(this.label19);
+            this.Company.Controls.Add(this.thrudatetextBox1);
+            this.Company.Controls.Add(this.ondatetextBox1);
+            this.Company.Controls.Add(this.label18);
+            this.Company.Controls.Add(this.label16);
+            this.Company.Controls.Add(this.accounttextBox1);
+            this.Company.Controls.Add(this.moneytextBox4);
             this.Company.Controls.Add(this.label8);
+            this.Company.Controls.Add(this.moneyTypetextBox3);
+            this.Company.Controls.Add(this.label9);
+            this.Company.Controls.Add(this.label17);
             this.Company.Controls.Add(this.taxtextBox7);
-            this.Company.Controls.Add(this.codetextBox6);
             this.Company.Controls.Add(this.scopetextBox2);
             this.Company.Controls.Add(this.label4);
             this.Company.Controls.Add(this.addrtextBox1);
@@ -140,40 +175,106 @@
             this.Company.Controls.Add(this.label1);
             this.Company.Location = new System.Drawing.Point(12, 12);
             this.Company.Name = "Company";
-            this.Company.Size = new System.Drawing.Size(360, 188);
+            this.Company.Size = new System.Drawing.Size(360, 251);
             this.Company.TabIndex = 5;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(169, 204);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(53, 12);
+            this.label19.TabIndex = 23;
+            this.label19.Text = "不填长期";
+            // 
+            // thrudatetextBox1
+            // 
+            this.thrudatetextBox1.Location = new System.Drawing.Point(228, 201);
+            this.thrudatetextBox1.Name = "thrudatetextBox1";
+            this.thrudatetextBox1.Size = new System.Drawing.Size(122, 21);
+            this.thrudatetextBox1.TabIndex = 22;
+            // 
+            // ondatetextBox1
+            // 
+            this.ondatetextBox1.Location = new System.Drawing.Point(63, 201);
+            this.ondatetextBox1.Name = "ondatetextBox1";
+            this.ondatetextBox1.Size = new System.Drawing.Size(100, 21);
+            this.ondatetextBox1.TabIndex = 21;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(4, 204);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 12);
+            this.label18.TabIndex = 20;
+            this.label18.Text = "成立日期";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(215, 177);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(29, 12);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "万元";
+            // 
+            // accounttextBox1
+            // 
+            this.accounttextBox1.Location = new System.Drawing.Point(63, 147);
+            this.accounttextBox1.Name = "accounttextBox1";
+            this.accounttextBox1.Size = new System.Drawing.Size(287, 21);
+            this.accounttextBox1.TabIndex = 13;
+            // 
+            // moneytextBox4
+            // 
+            this.moneytextBox4.Location = new System.Drawing.Point(154, 174);
+            this.moneytextBox4.Name = "moneytextBox4";
+            this.moneytextBox4.Size = new System.Drawing.Size(55, 21);
+            this.moneytextBox4.TabIndex = 18;
+            this.moneytextBox4.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 150);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 12);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "账号";
+            // 
+            // moneyTypetextBox3
+            // 
+            this.moneyTypetextBox3.Location = new System.Drawing.Point(63, 174);
+            this.moneyTypetextBox3.Name = "moneyTypetextBox3";
+            this.moneyTypetextBox3.Size = new System.Drawing.Size(79, 21);
+            this.moneyTypetextBox3.TabIndex = 17;
+            this.moneyTypetextBox3.Text = "人民币";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(-2, 151);
+            this.label9.Location = new System.Drawing.Point(-2, 123);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 11;
             this.label9.Text = "税务登记证";
             // 
-            // label8
+            // label17
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 123);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 12);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "组织机构";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(3, 177);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 12);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "注册资金";
             // 
             // taxtextBox7
             // 
-            this.taxtextBox7.Location = new System.Drawing.Point(63, 148);
+            this.taxtextBox7.Location = new System.Drawing.Point(63, 120);
             this.taxtextBox7.Name = "taxtextBox7";
             this.taxtextBox7.Size = new System.Drawing.Size(287, 21);
             this.taxtextBox7.TabIndex = 9;
-            // 
-            // codetextBox6
-            // 
-            this.codetextBox6.Location = new System.Drawing.Point(63, 120);
-            this.codetextBox6.Name = "codetextBox6";
-            this.codetextBox6.Size = new System.Drawing.Size(287, 21);
-            this.codetextBox6.TabIndex = 8;
             // 
             // scopetextBox2
             // 
@@ -218,7 +319,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.ownertextBox3);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(12, 206);
+            this.panel1.Location = new System.Drawing.Point(12, 269);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(197, 125);
             this.panel1.TabIndex = 6;
@@ -279,7 +380,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(405, 12);
+            this.checkBox1.Location = new System.Drawing.Point(593, 12);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(72, 16);
             this.checkBox1.TabIndex = 7;
@@ -294,7 +395,7 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(378, 34);
+            this.groupBox1.Location = new System.Drawing.Point(566, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(165, 42);
             this.groupBox1.TabIndex = 8;
@@ -348,7 +449,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(482, 233);
+            this.button2.Location = new System.Drawing.Point(660, 255);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -362,6 +463,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.checkBox3);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.relyPhonetextBox1);
             this.panel2.Controls.Add(this.relyIDtextBox2);
@@ -369,21 +471,21 @@
             this.panel2.Controls.Add(this.relytextBox3);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.checkBox2);
-            this.panel2.Location = new System.Drawing.Point(220, 206);
+            this.panel2.Location = new System.Drawing.Point(418, 269);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 125);
             this.panel2.TabIndex = 10;
             // 
-            // checkBox2
+            // checkBox3
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(4, 11);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(60, 16);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "同法人";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckStateChanged += new System.EventHandler(this.checkBox2_CheckStateChanged);
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(62, 11);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(72, 16);
+            this.checkBox3.TabIndex = 12;
+            this.checkBox3.Text = "同代理人";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckStateChanged += new System.EventHandler(this.checkBox3_CheckStateChanged);
             // 
             // label10
             // 
@@ -433,9 +535,21 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "对账人";
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(4, 11);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(60, 16);
+            this.checkBox2.TabIndex = 0;
+            this.checkBox2.Text = "同法人";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBox2.CheckStateChanged += new System.EventHandler(this.checkBox2_CheckStateChanged);
+            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(402, 132);
+            this.button3.Location = new System.Drawing.Point(573, 132);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 12;
@@ -445,7 +559,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(402, 161);
+            this.button4.Location = new System.Drawing.Point(573, 161);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 13;
@@ -457,11 +571,157 @@
             // 
             this.agreement.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.agreement_PrintPage);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(656, 82);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "采集表";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.checkBox4);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.comePhonetextBox1);
+            this.panel3.Controls.Add(this.comeIDtextBox2);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.cometextBox3);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Location = new System.Drawing.Point(215, 269);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(197, 125);
+            this.panel3.TabIndex = 15;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(11, 11);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(48, 16);
+            this.checkBox4.TabIndex = 6;
+            this.checkBox4.Text = "代理";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.checkBox4.CheckStateChanged += new System.EventHandler(this.checkBox4_CheckStateChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 88);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "手机号码";
+            // 
+            // comePhonetextBox1
+            // 
+            this.comePhonetextBox1.Location = new System.Drawing.Point(63, 85);
+            this.comePhonetextBox1.Name = "comePhonetextBox1";
+            this.comePhonetextBox1.Size = new System.Drawing.Size(100, 21);
+            this.comePhonetextBox1.TabIndex = 4;
+            this.comePhonetextBox1.Text = "4823029388";
+            // 
+            // comeIDtextBox2
+            // 
+            this.comeIDtextBox2.Location = new System.Drawing.Point(63, 57);
+            this.comeIDtextBox2.Name = "comeIDtextBox2";
+            this.comeIDtextBox2.Size = new System.Drawing.Size(119, 21);
+            this.comeIDtextBox2.TabIndex = 3;
+            this.comeIDtextBox2.Text = "838383847389220";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(9, 60);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 12);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "身份证";
+            // 
+            // cometextBox3
+            // 
+            this.cometextBox3.Location = new System.Drawing.Point(63, 29);
+            this.cometextBox3.Name = "cometextBox3";
+            this.cometextBox3.Size = new System.Drawing.Size(90, 21);
+            this.cometextBox3.TabIndex = 1;
+            this.cometextBox3.Text = "2中4国";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(9, 32);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 12);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "代理人";
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // genrecomboBox1
+            // 
+            this.genrecomboBox1.FormattingEnabled = true;
+            this.genrecomboBox1.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N"});
+            this.genrecomboBox1.Location = new System.Drawing.Point(250, 174);
+            this.genrecomboBox1.Name = "genrecomboBox1";
+            this.genrecomboBox1.Size = new System.Drawing.Size(100, 20);
+            this.genrecomboBox1.TabIndex = 24;
+            this.genrecomboBox1.Text = "H";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(436, 103);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(-2, 231);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(65, 12);
+            this.label20.TabIndex = 25;
+            this.label20.Text = "开户许可证";
+            // 
+            // basetextBox1
+            // 
+            this.basetextBox1.Location = new System.Drawing.Point(63, 228);
+            this.basetextBox1.Name = "basetextBox1";
+            this.basetextBox1.Size = new System.Drawing.Size(287, 21);
+            this.basetextBox1.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 358);
+            this.ClientSize = new System.Drawing.Size(747, 415);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel2);
@@ -482,6 +742,8 @@
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,9 +770,7 @@
         private System.Windows.Forms.TextBox ownertextBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox taxtextBox7;
-        private System.Windows.Forms.TextBox codetextBox6;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton4;
@@ -530,6 +790,31 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Drawing.Printing.PrintDocument agreement;
+        private System.Windows.Forms.TextBox accounttextBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox comePhonetextBox1;
+        private System.Windows.Forms.TextBox comeIDtextBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox cometextBox3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox moneytextBox4;
+        private System.Windows.Forms.TextBox moneyTypetextBox3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox thrudatetextBox1;
+        private System.Windows.Forms.TextBox ondatetextBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox genrecomboBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox basetextBox1;
+        private System.Windows.Forms.Label label20;
     }
 }
 
