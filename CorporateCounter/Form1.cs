@@ -205,5 +205,37 @@ namespace CorporateCounter
             pd.PrintPage += new PrintPageEventHandler(mailFill_PrintPage);
             pd.Print();
         }
+
+        private void agreement_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font ft = new Font("宋体", 10, FontStyle.Bold);
+            SolidBrush sb = new SolidBrush(Color.Black);
+            string CompName = compNametextBox1.Text;
+            string Addr = addrtextBox1.Text;
+            string OwnerPhone = ownerPhonetextBox5.Text;
+            string Postal = GetAppConfig("Postal");      //Postal---224221
+            string OwnerName = ownertextBox3.Text;
+            string BankFull = GetAppConfig("BankNameFull");
+            string hz = GetAppConfig("BankCharge");
+            string BankPhone = GetAppConfig("BankPhone");
+            string BankAddr = GetAppConfig("BankAddr");
+            e.Graphics.DrawString(BankFull, ft, sb, new PointF(188.0F, 180.0F));
+            e.Graphics.DrawString(hz, ft, sb, new PointF(245.0F, 199.0F));
+            e.Graphics.DrawString(BankPhone, ft, sb, new PointF(510.0F, 199.0F));
+            e.Graphics.DrawString(Postal, ft, sb, new PointF(190.0F, 219.0F));
+            e.Graphics.DrawString(BankAddr, ft, sb, new PointF(395.0F, 219.0F));
+            e.Graphics.DrawString(CompName, ft, sb, new PointF(188.0F, 245.0F));
+            e.Graphics.DrawString(OwnerName, ft, sb, new PointF(245.0F, 265.0F));
+            e.Graphics.DrawString(OwnerPhone, ft, sb, new PointF(510.0F, 265.0F));
+            e.Graphics.DrawString(Postal, ft, sb, new PointF(190.0F, 285.0F));
+            e.Graphics.DrawString(Addr, ft, sb, new PointF(395.0F, 285.0F));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(agreement_PrintPage);
+            pd.Print();
+        }
     }
 }
