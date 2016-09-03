@@ -57,9 +57,20 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
+            this.mailFill = new System.Drawing.Printing.PrintDocument();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.relyPhonetextBox1 = new System.Windows.Forms.TextBox();
+            this.relyIDtextBox2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.relytextBox3 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.Company.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // compNametextBox1
@@ -103,7 +114,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(384, 308);
+            this.button1.Location = new System.Drawing.Point(441, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -207,13 +218,13 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(12, 206);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 125);
+            this.panel1.Size = new System.Drawing.Size(197, 125);
             this.panel1.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 66);
+            this.label7.Location = new System.Drawing.Point(3, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 12);
             this.label7.TabIndex = 5;
@@ -221,7 +232,7 @@
             // 
             // ownerPhonetextBox5
             // 
-            this.ownerPhonetextBox5.Location = new System.Drawing.Point(63, 63);
+            this.ownerPhonetextBox5.Location = new System.Drawing.Point(63, 85);
             this.ownerPhonetextBox5.Name = "ownerPhonetextBox5";
             this.ownerPhonetextBox5.Size = new System.Drawing.Size(100, 21);
             this.ownerPhonetextBox5.TabIndex = 4;
@@ -229,7 +240,7 @@
             // 
             // ownerIDtextBox4
             // 
-            this.ownerIDtextBox4.Location = new System.Drawing.Point(63, 35);
+            this.ownerIDtextBox4.Location = new System.Drawing.Point(63, 57);
             this.ownerIDtextBox4.Name = "ownerIDtextBox4";
             this.ownerIDtextBox4.Size = new System.Drawing.Size(119, 21);
             this.ownerIDtextBox4.TabIndex = 3;
@@ -238,7 +249,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 38);
+            this.label6.Location = new System.Drawing.Point(9, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 2;
@@ -246,7 +257,7 @@
             // 
             // ownertextBox3
             // 
-            this.ownertextBox3.Location = new System.Drawing.Point(63, 7);
+            this.ownertextBox3.Location = new System.Drawing.Point(63, 29);
             this.ownertextBox3.Name = "ownertextBox3";
             this.ownertextBox3.Size = new System.Drawing.Size(90, 21);
             this.ownertextBox3.TabIndex = 1;
@@ -255,7 +266,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 10);
+            this.label5.Location = new System.Drawing.Point(14, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 0;
@@ -343,11 +354,100 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // mailFill
+            // 
+            this.mailFill.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.mailFill_PrintPage);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.relyPhonetextBox1);
+            this.panel2.Controls.Add(this.relyIDtextBox2);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.relytextBox3);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.checkBox2);
+            this.panel2.Location = new System.Drawing.Point(220, 206);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(186, 125);
+            this.panel2.TabIndex = 10;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(4, 11);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(60, 16);
+            this.checkBox2.TabIndex = 0;
+            this.checkBox2.Text = "同法人";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckStateChanged += new System.EventHandler(this.checkBox2_CheckStateChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(2, 88);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 12);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "手机号码";
+            // 
+            // relyPhonetextBox1
+            // 
+            this.relyPhonetextBox1.Location = new System.Drawing.Point(62, 85);
+            this.relyPhonetextBox1.Name = "relyPhonetextBox1";
+            this.relyPhonetextBox1.Size = new System.Drawing.Size(100, 21);
+            this.relyPhonetextBox1.TabIndex = 10;
+            // 
+            // relyIDtextBox2
+            // 
+            this.relyIDtextBox2.Location = new System.Drawing.Point(62, 57);
+            this.relyIDtextBox2.Name = "relyIDtextBox2";
+            this.relyIDtextBox2.Size = new System.Drawing.Size(119, 21);
+            this.relyIDtextBox2.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 60);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 12);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "身份证";
+            // 
+            // relytextBox3
+            // 
+            this.relytextBox3.Location = new System.Drawing.Point(62, 29);
+            this.relytextBox3.Name = "relytextBox3";
+            this.relytextBox3.Size = new System.Drawing.Size(90, 21);
+            this.relytextBox3.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 32);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 12);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "对账人";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(441, 153);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "彩信对账单";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 358);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkBox1);
@@ -363,6 +463,8 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,6 +501,16 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button2;
+        private System.Drawing.Printing.PrintDocument mailFill;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox relyPhonetextBox1;
+        private System.Windows.Forms.TextBox relyIDtextBox2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox relytextBox3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
