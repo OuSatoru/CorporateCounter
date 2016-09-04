@@ -92,6 +92,11 @@
             this.label15 = new System.Windows.Forms.Label();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.powercomboBox1 = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.Company.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -140,7 +145,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(573, 103);
+            this.button1.Location = new System.Drawing.Point(524, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -591,7 +596,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(573, 132);
+            this.button3.Location = new System.Drawing.Point(524, 132);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 12;
@@ -601,7 +606,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(573, 161);
+            this.button4.Location = new System.Drawing.Point(524, 161);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 13;
@@ -615,7 +620,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(656, 82);
+            this.button5.Location = new System.Drawing.Point(607, 82);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 14;
@@ -716,11 +721,71 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(607, 111);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 17;
+            this.button7.Text = "授权书";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // powercomboBox1
+            // 
+            this.powercomboBox1.FormattingEnabled = true;
+            this.powercomboBox1.Items.AddRange(new object[] {
+            "开",
+            "变",
+            "撤",
+            "网",
+            "印"});
+            this.powercomboBox1.Location = new System.Drawing.Point(688, 113);
+            this.powercomboBox1.Name = "powercomboBox1";
+            this.powercomboBox1.Size = new System.Drawing.Size(47, 20);
+            this.powercomboBox1.TabIndex = 18;
+            this.powercomboBox1.Text = "开";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(607, 140);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 19;
+            this.button8.Text = "彩信授权";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(607, 198);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "机构代码介绍";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(607, 169);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 21;
+            this.button10.Text = "机构代码申请";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 415);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.powercomboBox1);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button5);
@@ -818,6 +883,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox basetextBox1;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ComboBox powercomboBox1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 

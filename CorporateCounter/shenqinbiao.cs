@@ -27,35 +27,35 @@ namespace CorporateCounter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            WordExcelFuck.toReplace.Add("%CompanyName%", Form1.compName);
-            WordExcelFuck.toReplace.Add("%CompCer%", "营业执照");
-            WordExcelFuck.toReplace.Add("%Licence%", Form1.licence);
-            WordExcelFuck.toReplace.Add("%Addr%", Form1.addr);
-            WordExcelFuck.toReplace.Add("%CompPhone%", Form1.ownerPhone);
-            WordExcelFuck.toReplace.Add("%Postal%", Form1.GetAppConfig("Postal"));
-            WordExcelFuck.toReplace.Add("%Bureau%", "工商部门");
-            WordExcelFuck.toReplace.Add("%MoneyType%", Form1.moneyType);
-            WordExcelFuck.toReplace.Add("%Money%", Form1.money);
-            WordExcelFuck.toReplace.Add("%Scope%", Form1.scope);
-            WordExcelFuck.toReplace.Add("%Tax%", Form1.tax);
-            WordExcelFuck.toReplace.Add("%Base%", Form1.basee);
-            WordExcelFuck.toReplace.Add("Genre", Form1.genre);
-            WordExcelFuck.toReplace.Add("%RelyCer%", "身份证");
-            WordExcelFuck.toReplace.Add("%RelyID%", Form1.ownerID);
-            WordExcelFuck.toReplace.Add("%RelyPhone%", Form1.ownerPhone);
-            WordExcelFuck.toReplace.Add("%RelyName%", Form1.owner);
-            WordExcelFuck.toReplace.Add("%OwnerCer%", "身份证");
-            WordExcelFuck.toReplace.Add("%OwnerID%", Form1.ownerID);
-            WordExcelFuck.toReplace.Add("%OwnerPhone%", Form1.ownerPhone);
-            WordExcelFuck.toReplace.Add("%OwnerName%", Form1.owner);
-            WordExcelFuck.toReplace.Add("%OnDate%", Form1.onDate);
-            WordExcelFuck.toReplace.Add("%ThruDate%", Form1.thruDate);
-            WordExcelFuck.toReplace.Add("%OnCountry%", textBox6.Text);
-            WordExcelFuck.toReplace.Add("%InCountry%", textBox7.Text);
+            WordExcelFuck.toReplace.Update("%CompanyName%", Form1.compName);
+            WordExcelFuck.toReplace.Update("%CompCer%", "营业执照");
+            WordExcelFuck.toReplace.Update("%Licence%", Form1.licence);
+            WordExcelFuck.toReplace.Update("%Addr%", Form1.addr);
+            WordExcelFuck.toReplace.Update("%CompPhone%", Form1.ownerPhone);
+            WordExcelFuck.toReplace.Update("%Postal%", Form1.GetAppConfig("Postal"));
+            WordExcelFuck.toReplace.Update("%Bureau%", "工商部门");
+            WordExcelFuck.toReplace.Update("%MoneyType%", Form1.moneyType);
+            WordExcelFuck.toReplace.Update("%Money%", Form1.money);
+            WordExcelFuck.toReplace.Update("%Scope%", Form1.scope);
+            WordExcelFuck.toReplace.Update("%Tax%", Form1.tax);
+            WordExcelFuck.toReplace.Update("%Base%", Form1.basee);
+            WordExcelFuck.toReplace.Update("Genre", Form1.genre);
+            WordExcelFuck.toReplace.Update("%RelyCer%", "身份证");
+            WordExcelFuck.toReplace.Update("%RelyID%", Form1.ownerID);
+            WordExcelFuck.toReplace.Update("%RelyPhone%", Form1.ownerPhone);
+            WordExcelFuck.toReplace.Update("%RelyName%", Form1.owner);
+            WordExcelFuck.toReplace.Update("%OwnerCer%", "身份证");
+            WordExcelFuck.toReplace.Update("%OwnerID%", Form1.ownerID);
+            WordExcelFuck.toReplace.Update("%OwnerPhone%", Form1.ownerPhone);
+            WordExcelFuck.toReplace.Update("%OwnerName%", Form1.owner);
+            WordExcelFuck.toReplace.Update("%OnDate%", Form1.onDate);
+            WordExcelFuck.toReplace.Update("%ThruDate%", Form1.thruDate);
+            WordExcelFuck.toReplace.Update("%OnCountry%", textBox6.Text);
+            WordExcelFuck.toReplace.Update("%InCountry%", textBox7.Text);
             WordExcelFuck.genTemp("10104Template.doc");
             string currDir = Environment.CurrentDirectory;
             string dest = Path.Combine(currDir, "10104Template_temp.doc");
-            WordExcelFuck.wReplaceStory(WordExcelFuck.toReplace, dest);
+            WordExcelFuck.wReplaceNormal(WordExcelFuck.toReplace, dest);
             if (printDialog1.ShowDialog() == DialogResult.OK)
             {
                 Word.Application wa = new Word.ApplicationClass();

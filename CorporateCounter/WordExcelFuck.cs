@@ -13,9 +13,10 @@ namespace CorporateCounter
         public static Dictionary<string, string> toReplace = new Dictionary<string, string>()
         {
             {"%Year%", DateTime.Now.Year.ToString()},
-            {"%Month", DateTime.Now.Month.ToString()},
-            {"Day", DateTime.Now.Day.ToString()},
+            {"%Month%", DateTime.Now.Month.ToString()},
+            {"%Day%", DateTime.Now.Day.ToString()},
         };
+
         
         public static void genTemp(string src)
         {
@@ -67,7 +68,7 @@ namespace CorporateCounter
             wa.Quit(ref missing, ref missing, ref missing);
         }
 
-        public static void wReplaceNomal(Dictionary<string, string> dic, string dest)
+        public static void wReplaceNormal(Dictionary<string, string> dic, string dest)
         {
             Word.Application wa = new Word.ApplicationClass();
             object missing = Missing.Value;
@@ -94,7 +95,21 @@ namespace CorporateCounter
 
         public static void eReplace(Dictionary<string, string> dic, string dest)
         {
-
+            Excel.Application ea = new Excel.ApplicationClass();
+            object missing = Missing.Value;
+            Excel.Workbook wb = ea.Workbooks.Open(dest, missing, missing, missing, missing, missing, missing,
+                missing, missing, missing, missing, missing, missing, missing, missing);
+            Excel.Worksheet ws = (Excel.Worksheet)wb.Sheets[1];
+            foreach (var item in dic)
+            {
+                object findtext, replacewith;
+                findtext = item.Key;
+                replacewith = item.Value;
+                ws.Cells.Replace(findtext, replacewith, missing, missing, missing, missing, missing, missing);
+                wb.Save();
+            }
+            wb.Close(missing, missing, missing);
+            ea.Quit();
         }
 
         public static void wPrint(string dest)

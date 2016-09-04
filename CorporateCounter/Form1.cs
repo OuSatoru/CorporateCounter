@@ -8,6 +8,9 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Configuration;
 using System.IO;
+using Word = Microsoft.Office.Interop.Word;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace CorporateCounter
 {
@@ -372,7 +375,10 @@ namespace CorporateCounter
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Path.Combine(Environment.CurrentDirectory,"10104Template"));
+            WordExcelFuck.toReplace.Update("aaa", "AAA");
+            WordExcelFuck.toReplace.Update("bbb", "AAA");
+            //WordExcelFuck.toReplace.Update("aaa", "d");
+            MessageBox.Show(WordExcelFuck.toReplace["aaa"]);
         }
 
         private void ondatetextBox1_TextChanged(object sender, EventArgs e)
@@ -399,11 +405,224 @@ namespace CorporateCounter
             DirectoryInfo theDir = new DirectoryInfo(currDir);
             foreach(FileInfo fi in theDir.GetFiles())
             {
-                if (fi.Name.EndsWith("_temp"))
+                if (fi.Name.EndsWith("_temp.doc") || fi.Name.EndsWith("_temp.xls"))
                 {
                     fi.Delete();
                 }
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            WordExcelFuck.toReplace.Update("%CompanyName%", compNametextBox1.Text);
+            WordExcelFuck.toReplace.Update("%DateInChinese%", dateinchn);
+            #region switch开户
+            switch (powercomboBox1.Text)
+            {
+                case "开":
+                    WordExcelFuck.toReplace.Update("%Account%", "                       ");
+                    WordExcelFuck.toReplace.Update("%Come1%", cometextBox3.Text.PadRight(7 - cometextBox3.Text.Length));
+                    WordExcelFuck.toReplace.Update("%ComeID1%", comeIDtextBox2.Text);
+                    WordExcelFuck.toReplace.Update("%Come2%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID2%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come3%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID3%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come4%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID4%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come5%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID5%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come6%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID6%", "".PadRight(18));
+                    break;
+                case "变":
+                    WordExcelFuck.toReplace.Update("%Account%", accounttextBox1.Text);
+                    WordExcelFuck.toReplace.Update("%Come2%", cometextBox3.Text.PadRight(7 - cometextBox3.Text.Length));
+                    WordExcelFuck.toReplace.Update("%ComeID2%", comeIDtextBox2.Text);
+                    WordExcelFuck.toReplace.Update("%Come1%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID1%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come3%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID3%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come4%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID4%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come5%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID5%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come6%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID6%", "".PadRight(18));
+                    break;
+                case "撤":
+                    WordExcelFuck.toReplace.Update("%Account%", accounttextBox1.Text);
+                    WordExcelFuck.toReplace.Update("%Come3%", cometextBox3.Text.PadRight(7 - cometextBox3.Text.Length));
+                    WordExcelFuck.toReplace.Update("%ComeID3%", comeIDtextBox2.Text);
+                    WordExcelFuck.toReplace.Update("%Come1%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID1%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come2%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID2%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come4%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID4%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come5%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID5%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come6%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID6%", "".PadRight(18));
+                    break;
+                case "网":
+                    WordExcelFuck.toReplace.Update("%Account%", accounttextBox1.Text);
+                    WordExcelFuck.toReplace.Update("%Come4%", cometextBox3.Text.PadRight(7 - cometextBox3.Text.Length));
+                    WordExcelFuck.toReplace.Update("%ComeID4%", comeIDtextBox2.Text);
+                    WordExcelFuck.toReplace.Update("%Come1%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID1%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come2%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID2%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come3%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID3%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come5%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID5%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come6%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID6%", "".PadRight(18));
+                    break;
+                case "印":
+                    WordExcelFuck.toReplace.Update("%Account%", accounttextBox1.Text);
+                    WordExcelFuck.toReplace.Update("%Come5%", cometextBox3.Text.PadRight(7 - cometextBox3.Text.Length));
+                    WordExcelFuck.toReplace.Update("%ComeID5%", comeIDtextBox2.Text);
+                    WordExcelFuck.toReplace.Update("%Come1%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID1%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come2%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID2%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come4%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID4%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come3%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID3%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come6%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID6%", "".PadRight(18));
+                    break;
+                default:
+                    WordExcelFuck.toReplace.Update("%Account%", accounttextBox1.Text);
+                    WordExcelFuck.toReplace.Update("%Come6%", cometextBox3.Text.PadRight(7 - cometextBox3.Text.Length));
+                    WordExcelFuck.toReplace.Update("%ComeID6%", comeIDtextBox2.Text);
+                    WordExcelFuck.toReplace.Update("%Come1%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID1%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come2%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID2%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come4%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID4%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come5%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID5%", "".PadRight(18));
+                    WordExcelFuck.toReplace.Update("%Come3%", "".PadRight(7));
+                    WordExcelFuck.toReplace.Update("%ComeID3%", "".PadRight(18));
+                    break;
+            }
+            #endregion
+            WordExcelFuck.genTemp("PowerTemplate.doc");
+            string currDir = Environment.CurrentDirectory;
+            string dest = Path.Combine(currDir, "PowerTemplate_temp.doc");
+            WordExcelFuck.wReplaceNormal(WordExcelFuck.toReplace, dest);
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Word.Application wa = new Word.ApplicationClass();
+                object wb = wa.WordBasic;
+                object[] argValues = new object[] { printDialog1.PrinterSettings.PrinterName, 1 };
+                string[] argNames = new string[] { "Printer", "DoNotSetAsSysDefault" };
+                wa.WordBasic.GetType().InvokeMember("FilePrintSetup", BindingFlags.InvokeMethod, null, wb, argValues, null, null, argNames);
+                object missing = Missing.Value;
+                Word.Document d = wa.Documents.Open(dest, ref missing,
+                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
+                d.PrintOut();
+                d.Close(ref missing, ref missing, ref missing);
+                wa.Quit(ref missing, ref missing, ref missing);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if(checkBox2.CheckState == CheckState.Unchecked)
+            {
+                WordExcelFuck.toReplace.Update("%BankNameShort%", GetAppConfig("BankNameShort"));
+                WordExcelFuck.toReplace.Update("%DateInChinese%", dateinchn);
+                WordExcelFuck.toReplace.Update("%RelyName%", relytextBox3.Text);
+                WordExcelFuck.toReplace.Update("%RelyID%", relyIDtextBox2.Text);
+                WordExcelFuck.toReplace.Update("%RelyPhone%", relyPhonetextBox1.Text);
+                WordExcelFuck.toReplace.Update("%OwnerID%", ownertextBox3.Text);
+                WordExcelFuck.toReplace.Update("%RelyPhone%", ownerPhonetextBox5.Text);
+                WordExcelFuck.genTemp("MailTemplate.doc");
+                string currDir = Environment.CurrentDirectory;
+                string dest = Path.Combine(currDir, "MailTemplate_temp.doc");
+                WordExcelFuck.wReplaceNormal(WordExcelFuck.toReplace, dest);
+                if (printDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    Word.Application wa = new Word.ApplicationClass();
+                    object wb = wa.WordBasic;
+                    object[] argValues = new object[] { printDialog1.PrinterSettings.PrinterName, 1 };
+                    string[] argNames = new string[] { "Printer", "DoNotSetAsSysDefault" };
+                    wa.WordBasic.GetType().InvokeMember("FilePrintSetup", BindingFlags.InvokeMethod, null, wb, argValues, null, null, argNames);
+                    object missing = Missing.Value;
+                    Word.Document d = wa.Documents.Open(dest, ref missing,
+                    ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                    ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
+                    d.PrintOut();
+                    d.Close(ref missing, ref missing, ref missing);
+                    wa.Quit(ref missing, ref missing, ref missing);
+                }
+            }
+            else
+            {
+                MessageBox.Show("同法人，不需要打印");
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            WordExcelFuck.toReplace.Update("%BankNameFull%", GetAppConfig("BankNameFull"));
+            WordExcelFuck.toReplace.Update("%DateInChinese%", dateinchn);
+            WordExcelFuck.toReplace.Update("%RelyName%", relytextBox3.Text);
+            WordExcelFuck.toReplace.Update("%RelyID%", relyIDtextBox2.Text);
+            WordExcelFuck.genTemp("CodeLetterTemplate.doc");
+            string currDir = Environment.CurrentDirectory;
+            string dest = Path.Combine(currDir, "CodeLetterTemplate_temp.doc");
+            WordExcelFuck.wReplaceNormal(WordExcelFuck.toReplace, dest);
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Word.Application wa = new Word.ApplicationClass();
+                object wb = wa.WordBasic;
+                object[] argValues = new object[] { printDialog1.PrinterSettings.PrinterName, 1 };
+                string[] argNames = new string[] { "Printer", "DoNotSetAsSysDefault" };
+                wa.WordBasic.GetType().InvokeMember("FilePrintSetup", BindingFlags.InvokeMethod, null, wb, argValues, null, null, argNames);
+                object missing = Missing.Value;
+                Word.Document d = wa.Documents.Open(dest, ref missing,
+                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
+                d.PrintOut();
+                d.Close(ref missing, ref missing, ref missing);
+                wa.Quit(ref missing, ref missing, ref missing);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            WordExcelFuck.toReplace.Update("%CompanyName%", compNametextBox1.Text);
+            WordExcelFuck.toReplace.Update("%Addr%", addrtextBox1.Text);
+            WordExcelFuck.toReplace.Update("%Bureau%", "工商部门");
+            WordExcelFuck.toReplace.Update("%Tax%", taxtextBox7.Text);
+            WordExcelFuck.toReplace.Update("%Genre%", genrecomboBox1.Text);
+            WordExcelFuck.toReplace.Update("%OnDate%", ondatetextBox1.Text);
+            WordExcelFuck.toReplace.Update("%CompPhone%", ownerPhonetextBox5.Text);
+            WordExcelFuck.toReplace.Update("%Money%", moneytextBox4.Text);
+            WordExcelFuck.toReplace.Update("%OwnerID%", ownerIDtextBox4.Text);
+            WordExcelFuck.toReplace.Update("%OwnerName%", ownertextBox3.Text);
+            WordExcelFuck.genTemp("CodeTemplate.xls");
+            string currDir = Environment.CurrentDirectory;
+            string dest = Path.Combine(currDir, "CodeTemplate_temp.xls");
+            WordExcelFuck.eReplace(WordExcelFuck.toReplace, dest);
+            Excel.Application ea = new Excel.ApplicationClass();
+            object missing = Missing.Value;
+            Excel.Workbook wb = ea.Workbooks.Open(dest, missing, missing, missing, missing, missing, missing,
+                 missing, missing, missing, missing, missing, missing, missing, missing);
+            Excel.Worksheet ws = (Excel.Worksheet)wb.Sheets["Sheet1"];
+            ea.Visible = true;
+            ws.PrintPreview(true);
+            wb.Saved = true;
+            wb.Close(missing, missing, missing);
+            ea.Visible = false;
+            ea.Quit();
         }
     }
 }
