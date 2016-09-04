@@ -608,21 +608,25 @@ namespace CorporateCounter
             WordExcelFuck.toReplace.Update("%Money%", moneytextBox4.Text);
             WordExcelFuck.toReplace.Update("%OwnerID%", ownerIDtextBox4.Text);
             WordExcelFuck.toReplace.Update("%OwnerName%", ownertextBox3.Text);
-            WordExcelFuck.genTemp("CodeTemplate.xls");
+            WordExcelFuck.genTemp("CodeTemplate.doc");
             string currDir = Environment.CurrentDirectory;
-            string dest = Path.Combine(currDir, "CodeTemplate_temp.xls");
-            WordExcelFuck.eReplace(WordExcelFuck.toReplace, dest);
-            Excel.Application ea = new Excel.ApplicationClass();
-            object missing = Missing.Value;
-            Excel.Workbook wb = ea.Workbooks.Open(dest, missing, missing, missing, missing, missing, missing,
-                 missing, missing, missing, missing, missing, missing, missing, missing);
-            Excel.Worksheet ws = (Excel.Worksheet)wb.Sheets["Sheet1"];
-            ea.Visible = true;
-            ws.PrintPreview(true);
-            wb.Saved = true;
-            wb.Close(missing, missing, missing);
-            ea.Visible = false;
-            ea.Quit();
+            string dest = Path.Combine(currDir, "CodeTemplate_temp.doc");
+            WordExcelFuck.wReplaceNormal(WordExcelFuck.toReplace, dest);
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Word.Application wa = new Word.ApplicationClass();
+                object wb = wa.WordBasic;
+                object[] argValues = new object[] { printDialog1.PrinterSettings.PrinterName, 1 };
+                string[] argNames = new string[] { "Printer", "DoNotSetAsSysDefault" };
+                wa.WordBasic.GetType().InvokeMember("FilePrintSetup", BindingFlags.InvokeMethod, null, wb, argValues, null, null, argNames);
+                object missing = Missing.Value;
+                Word.Document d = wa.Documents.Open(dest, ref missing,
+                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
+                d.PrintOut();
+                d.Close(ref missing, ref missing, ref missing);
+                wa.Quit(ref missing, ref missing, ref missing);
+            }
         }
     }
 }
