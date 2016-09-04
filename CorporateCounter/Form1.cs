@@ -383,7 +383,8 @@ namespace CorporateCounter
 
         private void ondatetextBox1_TextChanged(object sender, EventArgs e)
         {
-            if(ondatetextBox1.Text.Length == 8)
+            int a;
+            if((ondatetextBox1.Text.Length == 8) && (int.TryParse(ondatetextBox1.Text, out a)))
             {
                 ondatetextBox1.Text = string.Format("{0}年{1}月{2}日", ondatetextBox1.Text.Substring(0, 4),
                     ondatetextBox1.Text.Substring(4, 2), ondatetextBox1.Text.Substring(6, 2));
@@ -392,7 +393,8 @@ namespace CorporateCounter
 
         private void thrudatetextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (thrudatetextBox1.Text.Length == 8)
+            int a;
+            if ((thrudatetextBox1.Text.Length == 8) && (int.TryParse(thrudatetextBox1.Text, out a)))
             {
                 thrudatetextBox1.Text = string.Format("{0}年{1}月{2}日", thrudatetextBox1.Text.Substring(0, 4),
                     thrudatetextBox1.Text.Substring(4, 2), thrudatetextBox1.Text.Substring(6, 2));

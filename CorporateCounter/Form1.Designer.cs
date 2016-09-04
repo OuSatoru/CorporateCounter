@@ -67,7 +67,6 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
             this.mailFill = new System.Drawing.Printing.PrintDocument();
             this.panel2 = new System.Windows.Forms.Panel();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -91,7 +90,6 @@
             this.cometextBox3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.powercomboBox1 = new System.Windows.Forms.ComboBox();
             this.button8 = new System.Windows.Forms.Button();
@@ -111,7 +109,6 @@
             this.compNametextBox1.Name = "compNametextBox1";
             this.compNametextBox1.Size = new System.Drawing.Size(287, 21);
             this.compNametextBox1.TabIndex = 0;
-            this.compNametextBox1.Text = "枯枯城 是 是是国";
             // 
             // licencetextBox2
             // 
@@ -119,7 +116,6 @@
             this.licencetextBox2.Name = "licencetextBox2";
             this.licencetextBox2.Size = new System.Drawing.Size(287, 21);
             this.licencetextBox2.TabIndex = 1;
-            this.licencetextBox2.Text = "9128343849392338S";
             this.licencetextBox2.TextChanged += new System.EventHandler(this.licencetextBox2_TextChanged);
             // 
             // label1
@@ -146,7 +142,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(524, 103);
+            this.button1.Location = new System.Drawing.Point(385, 98);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -204,25 +200,31 @@
             // 
             this.genrecomboBox1.FormattingEnabled = true;
             this.genrecomboBox1.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N"});
+            "农、林、牧、渔业",
+            "采矿业",
+            "制造业",
+            "电力、燃气及水的生产和供应业",
+            "建筑业",
+            "交通运输、仓储和邮政业",
+            "信息传输、计算机服务和软件业",
+            "批发和零售业",
+            "住宿和餐饮业",
+            "金融业",
+            "房地产业",
+            "租赁和商务服务业",
+            "科学研究、技术服务和地质勘查业",
+            "水利、环境和公共设施管理业",
+            "居民服务和其他服务业",
+            "教育",
+            "卫生、社会保障和社会福利业",
+            "文化、体育和娱乐业",
+            "公共管理和社会组织",
+            "国际组织"});
             this.genrecomboBox1.Location = new System.Drawing.Point(250, 174);
             this.genrecomboBox1.Name = "genrecomboBox1";
             this.genrecomboBox1.Size = new System.Drawing.Size(100, 20);
             this.genrecomboBox1.TabIndex = 24;
-            this.genrecomboBox1.Text = "H";
+            this.genrecomboBox1.Text = "批发和零售业";
             // 
             // label19
             // 
@@ -330,7 +332,6 @@
             this.scopetextBox2.Name = "scopetextBox2";
             this.scopetextBox2.Size = new System.Drawing.Size(287, 21);
             this.scopetextBox2.TabIndex = 7;
-            this.scopetextBox2.Text = "卖比比比比比比比";
             // 
             // label4
             // 
@@ -347,7 +348,6 @@
             this.addrtextBox1.Name = "addrtextBox1";
             this.addrtextBox1.Size = new System.Drawing.Size(287, 21);
             this.addrtextBox1.TabIndex = 5;
-            this.addrtextBox1.Text = "为这产是同上上上是中";
             // 
             // label3
             // 
@@ -387,7 +387,6 @@
             this.ownerPhonetextBox5.Name = "ownerPhonetextBox5";
             this.ownerPhonetextBox5.Size = new System.Drawing.Size(100, 21);
             this.ownerPhonetextBox5.TabIndex = 4;
-            this.ownerPhonetextBox5.Text = "4823029388";
             // 
             // ownerIDtextBox4
             // 
@@ -395,7 +394,6 @@
             this.ownerIDtextBox4.Name = "ownerIDtextBox4";
             this.ownerIDtextBox4.Size = new System.Drawing.Size(119, 21);
             this.ownerIDtextBox4.TabIndex = 3;
-            this.ownerIDtextBox4.Text = "838383847389220";
             // 
             // label6
             // 
@@ -412,7 +410,6 @@
             this.ownertextBox3.Name = "ownertextBox3";
             this.ownertextBox3.Size = new System.Drawing.Size(90, 21);
             this.ownertextBox3.TabIndex = 1;
-            this.ownertextBox3.Text = "2中4国";
             // 
             // label5
             // 
@@ -428,7 +425,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(593, 12);
+            this.checkBox1.Location = new System.Drawing.Point(454, 7);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(72, 16);
             this.checkBox1.TabIndex = 7;
@@ -443,7 +440,7 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(566, 34);
+            this.groupBox1.Location = new System.Drawing.Point(427, 29);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(165, 42);
             this.groupBox1.TabIndex = 8;
@@ -494,16 +491,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "基";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(660, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // mailFill
             // 
@@ -597,7 +584,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(524, 132);
+            this.button3.Location = new System.Drawing.Point(385, 127);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 12;
@@ -607,7 +594,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(524, 161);
+            this.button4.Location = new System.Drawing.Point(385, 156);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 13;
@@ -621,7 +608,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(607, 82);
+            this.button5.Location = new System.Drawing.Point(468, 77);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 14;
@@ -672,7 +659,6 @@
             this.comePhonetextBox1.Name = "comePhonetextBox1";
             this.comePhonetextBox1.Size = new System.Drawing.Size(100, 21);
             this.comePhonetextBox1.TabIndex = 4;
-            this.comePhonetextBox1.Text = "4823029388";
             // 
             // comeIDtextBox2
             // 
@@ -680,7 +666,6 @@
             this.comeIDtextBox2.Name = "comeIDtextBox2";
             this.comeIDtextBox2.Size = new System.Drawing.Size(119, 21);
             this.comeIDtextBox2.TabIndex = 3;
-            this.comeIDtextBox2.Text = "838383847389220";
             // 
             // label14
             // 
@@ -697,7 +682,6 @@
             this.cometextBox3.Name = "cometextBox3";
             this.cometextBox3.Size = new System.Drawing.Size(90, 21);
             this.cometextBox3.TabIndex = 1;
-            this.cometextBox3.Text = "2中4国";
             // 
             // label15
             // 
@@ -712,19 +696,9 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(436, 103);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(607, 111);
+            this.button7.Location = new System.Drawing.Point(468, 106);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 17;
@@ -741,7 +715,7 @@
             "撤",
             "网",
             "印"});
-            this.powercomboBox1.Location = new System.Drawing.Point(688, 113);
+            this.powercomboBox1.Location = new System.Drawing.Point(549, 108);
             this.powercomboBox1.Name = "powercomboBox1";
             this.powercomboBox1.Size = new System.Drawing.Size(47, 20);
             this.powercomboBox1.TabIndex = 18;
@@ -749,7 +723,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(607, 140);
+            this.button8.Location = new System.Drawing.Point(468, 135);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 19;
@@ -759,7 +733,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(607, 198);
+            this.button9.Location = new System.Drawing.Point(468, 193);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 20;
@@ -769,7 +743,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(607, 169);
+            this.button10.Location = new System.Drawing.Point(468, 164);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 21;
@@ -779,7 +753,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(607, 227);
+            this.button11.Location = new System.Drawing.Point(468, 222);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 22;
@@ -791,25 +765,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 415);
+            this.ClientSize = new System.Drawing.Size(623, 415);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.powercomboBox1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Company);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "对公表格";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -857,7 +830,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button2;
         private System.Drawing.Printing.PrintDocument mailFill;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
@@ -892,7 +864,6 @@
         private System.Windows.Forms.TextBox ondatetextBox1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox genrecomboBox1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox basetextBox1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button7;
