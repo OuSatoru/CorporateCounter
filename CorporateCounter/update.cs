@@ -4,6 +4,7 @@ using System.Text;
 
 namespace System.Runtime.CompilerServices
 {
+    //Why this
     public class ExtensionAttribute : Attribute { }
 }
 

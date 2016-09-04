@@ -541,8 +541,8 @@ namespace CorporateCounter
                 WordExcelFuck.toReplace.Update("%RelyName%", relytextBox3.Text);
                 WordExcelFuck.toReplace.Update("%RelyID%", relyIDtextBox2.Text);
                 WordExcelFuck.toReplace.Update("%RelyPhone%", relyPhonetextBox1.Text);
-                WordExcelFuck.toReplace.Update("%OwnerID%", ownertextBox3.Text);
-                WordExcelFuck.toReplace.Update("%RelyPhone%", ownerPhonetextBox5.Text);
+                WordExcelFuck.toReplace.Update("%OwnerID%", ownerIDtextBox4.Text);
+                WordExcelFuck.toReplace.Update("%OwnerPhone%", ownerPhonetextBox5.Text);
                 WordExcelFuck.genTemp("MailTemplate.doc");
                 string currDir = Environment.CurrentDirectory;
                 string dest = Path.Combine(currDir, "MailTemplate_temp.doc");
