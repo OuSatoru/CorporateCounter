@@ -628,5 +628,32 @@ namespace CorporateCounter
                 wa.Quit(ref missing, ref missing, ref missing);
             }
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            WordExcelFuck.toReplace.Update("%CompanyName%", compNametextBox1.Text);
+            WordExcelFuck.toReplace.Update("%Addr%", addrtextBox1.Text);
+            WordExcelFuck.toReplace.Update("%CompPhone%", ownerPhonetextBox5.Text);
+            WordExcelFuck.toReplace.Update("%Account%", accounttextBox1.Text);
+            WordExcelFuck.genTemp("SealTemplate.doc");
+            string currDir = Environment.CurrentDirectory;
+            string dest = Path.Combine(currDir, "SealTemplate_temp.doc");
+            WordExcelFuck.wReplaceNormal(WordExcelFuck.toReplace, dest);
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Word.Application wa = new Word.ApplicationClass();
+                object wb = wa.WordBasic;
+                object[] argValues = new object[] { printDialog1.PrinterSettings.PrinterName, 1 };
+                string[] argNames = new string[] { "Printer", "DoNotSetAsSysDefault" };
+                wa.WordBasic.GetType().InvokeMember("FilePrintSetup", BindingFlags.InvokeMethod, null, wb, argValues, null, null, argNames);
+                object missing = Missing.Value;
+                Word.Document d = wa.Documents.Open(dest, ref missing,
+                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing,
+                ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
+                d.PrintOut();
+                d.Close(ref missing, ref missing, ref missing);
+                wa.Quit(ref missing, ref missing, ref missing);
+            }
+        }
     }
 }

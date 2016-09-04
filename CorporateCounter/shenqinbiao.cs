@@ -39,7 +39,7 @@ namespace CorporateCounter
             WordExcelFuck.toReplace.Update("%Scope%", Form1.scope);
             WordExcelFuck.toReplace.Update("%Tax%", Form1.tax);
             WordExcelFuck.toReplace.Update("%Base%", Form1.basee);
-            WordExcelFuck.toReplace.Update("Genre", Form1.genre);
+            WordExcelFuck.toReplace.Update("%Genre%", Form1.genre);
             WordExcelFuck.toReplace.Update("%RelyCer%", "身份证");
             WordExcelFuck.toReplace.Update("%RelyID%", Form1.ownerID);
             WordExcelFuck.toReplace.Update("%RelyPhone%", Form1.ownerPhone);
