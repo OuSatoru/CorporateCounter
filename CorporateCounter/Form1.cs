@@ -657,5 +657,16 @@ namespace CorporateCounter
                 wa.Quit(ref missing, ref missing, ref missing);
             }
         }
+
+        private int count = 0;
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            count += 1;
+            if (count == 8)
+            {
+                MessageBox.Show("I ❤ FY!");
+                count = 0;
+            }
+        }
     }
 }
